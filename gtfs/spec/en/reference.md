@@ -888,9 +888,6 @@ Specifically, attaching them means the following:
 - trip segment: the notice applies to part of a trip.
 - stop: the notice applies to a stop but completely decoupled from a specific trip. It is not intended for notices that target stop times.
   
-Conditionally Required:
-- **Required** if [notices.txt](#noticestxt) is provided.
-
 |  Field Name | Type | Presence | Description |
 |  ------ | ------ | ------ | ------ |
 | `notice_id` | Foreign ID referencing `notices.notice_id` | **Conditionally Required** | Identifies the notice to assign.<br><br>Conditionally Required:<br>- **Required** if `notice_group_id` is not defined.<br>- **Forbidden** if `notice_group_id` is defined. |
