@@ -894,7 +894,7 @@ Conditionally Required:
 |  Field Name | Type | Presence | Description |
 |  ------ | ------ | ------ | ------ |
 | `notice_id` | Foreign ID referencing `notices.notice_id` | **Conditionally Required** | Identifies the notice to assign.<br><br>Conditionally Required:<br>- **Required** if `notice_group_id` is not defined.<br>- **Forbidden** if `notice_group_id` is defined. |
-| `notice_group_id` | ID referencing `notices.notice_group_id` | **Conditionally Required** | Identifies the notice group to assign. All notices sharing this `notice_group_id` in [notices.txt](#noticestxt) are assigned.<br><br>Conditionally Required:<br>- **Required** if `notice_id` is not defined.<br>- **Forbidden** if `notice_id` is defined. |
+| `notice_group_id` | Foreign ID referencing `notices.notice_group_id` | **Conditionally Required** | Identifies the notice group to assign. All notices sharing this `notice_group_id` in [notices.txt](#noticestxt) are assigned.<br><br>Conditionally Required:<br>- **Required** if `notice_id` is not defined.<br>- **Forbidden** if `notice_id` is defined. |
 | `table_name` | Enum | **Required** | Identifies the table containing the record to which the notice is assigned. Valid options are:<br><br>`routes` - Record is in [routes.txt](#routestxt).<br>`trips` - Record is in [trips.txt](#tripstxt).<br>`stops` - Record is in [stops.txt](#stopstxt).<br>`trip_segments` - Record is in [trip_segments.txt](#trip_segmentstxt). |
 | `record_id` | Foreign ID | **Required** | Primary key of the record in the table specified by `table_name` to which the notice is assigned. For `table_name=routes` use `route_id`; for `table_name=trips` use `trip_id`; for `table_name=stops` use `stop_id`; for `table_name=trip_segments` use `trip_segment_id`. |
 
